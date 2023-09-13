@@ -2,8 +2,6 @@
 Official repo for paper ["Bridge Diffusion Model: bridge non-English language-native text-to-image diffusion model with English communities"](https://arxiv.org/abs/2309.00952)
 
 ## Contents
-- [Bridge Diffusion Model](#bridge-diffusion-model)
-  - [Contents](#contents)
   - [Introduction](#introduction)
   - [Method](#method)
   - [Evaluation](#evaluation)
@@ -15,13 +13,13 @@ Official repo for paper ["Bridge Diffusion Model: bridge non-English language-na
 
 <u>Developing non-English language-native TTI model is necessary because all existing (English) models all have language related bias.</u> As pointed out by Stable Bias[[1]](#1) , English-native Text-to-Image (TTI) models, including but not limited to DALL-E 2[[2]](#2), Stable Diffusion[[3]](#3) v1.4, and v2, display a substantial over-representation of attributes associated with white individuals and males. These language-related biases are inherent and pervasive for current TTI models, due to the fact that they are mainly trained with data from English world for example the commonly used LAION dataset, thus resulting in over-representation for English world figures meanwhile inadequate representation for non-English world counter-parts.
 
-<u>Compatability with current English TTI communities is necessary for the thriving of non-English language-native TTI communities</u>  The most straightforward and cheapest choice for non-English language-native TTI model development is to combine SD model with external translation. This however definitely leaves the inherent English model bias entirely untouched. Another line of works involve alignment-based strategies, by aligning the embedding space of different language text encoders with parallel translation text corpus, which is just implicitly another "translation" method. Based on aligned text encoder, Taiyi-Stable-Diffusion-1B-Chinese-EN-v0.1[[4]](#4) further fine-tuned the TTI model with Chinese-native data. This allows the English-native model to assimilate Chinese-native language semantics at low cost while maintain a certain level of compatibility between the English and Chinese TTI communities, though the balance is tricky. To resolve bias inherent in English-native models, the most radical method is to train TTI model from scratch with non-English native data. For instance, ERNIE-ViLG 2.0[[5]](#5) and Wukong-Huahua[[6]](#6) are trained with Chinese native data, and capable of generating high-quality images consistent with Chinese language semantics. The fundamental problem of this line of works is that it loses compatibility with its ancestral English-native models, which means it can not utilize progress from the English-native TTI communities directly. **This would lead to community isolation and development stagnation for the Chinese-native TTI community in the long run.**
+<u>Compatability with current English TTI communities is necessary for the thriving of non-English language-native TTI communities.</u> The most straightforward and cheapest choice for non-English language-native TTI model development is to combine SD model with external translation. This however definitely leaves the inherent English model bias entirely untouched. Another line of works involve alignment-based strategies, by aligning the embedding space of different language text encoders with parallel translation text corpus, which is just implicitly another "translation" method. Based on aligned text encoder, Taiyi-Stable-Diffusion-1B-Chinese-EN-v0.1[[4]](#4) further fine-tuned the TTI model with Chinese-native data. This allows the English-native model to assimilate Chinese-native language semantics at low cost while maintain a certain level of compatibility between the English and Chinese TTI communities, though the balance is tricky. To resolve bias inherent in English-native models, the most radical method is to train TTI model from scratch with non-English native data. For instance, ERNIE-ViLG 2.0[[5]](#5) and Wukong-Huahua[[6]](#6) are trained with Chinese native data, and capable of generating high-quality images consistent with Chinese language semantics. The fundamental problem of this line of works is that it loses compatibility with its ancestral English-native models, which means it can not utilize progress from the English-native TTI communities directly. **This would lead to community isolation and development stagnation for the Chinese-native TTI community in the long run.**
 
 ## Method 
 BDM entails the utilization of a backbone-branch network architecture akin to ControlNet[[7]](#7), model structure illustrated in the following    
 <center><img src="docs\BDM_structure.png" alt= “BDM” width="400" height="300"></center>      
 <center>Fig.1 BDM model structure</center> 
-<br/>     
+
 The backbone part serves as a good diffusion initialization and will be frozen during training, which could be from any pretrained diffusion TTI model. We leverage Stable Diffusion 1.5 in current implementation. The branch part servers as language-native semantics injection module, whose parameters will be trained with language-native text-image pairs. 
 Different from ControlNet, BDM's branch employs a Chinese-native CLIP[[8]](#8) as the text encoder, where the non-English language-native text prompt is actually processed. The English-native text encoder in the backbone part becomes optional, and will be fed with an empty constant string ("") in our implementation.
 
@@ -31,10 +29,9 @@ For model inference, language-native positive prompts as well as negative ones w
 Here are several image generation illustrations for our BDM, with Chinese-native TTI capability and integrated with different English TTI communty techniques.   
 <center><img src="docs\Chinese_concepts.png" alt= “Chinese_concepts” width="600" height="550"> </center>      
 <center>Fig.2 Chinese unique concepts</center>  
-<br/>
 <center><img src="docs\different_base_model.png" alt= “different_base_model” width="600" height="650"> </center>      
 <center>Fig.3 Different English branch</center>  
-<br/>
+
 For more illustrations and details, please refer to our paper ["Bridge Diffusion Model: bridge non-English language-native text-to-image diffusion model with English communities"](https://arxiv.org/abs/2309.00952)    
  
 ## Citation
