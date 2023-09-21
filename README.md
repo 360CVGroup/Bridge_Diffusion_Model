@@ -1,6 +1,6 @@
 # Bridge Diffusion Model
 [![Paper](https://img.shields.io/badge/Paper-arxiv.2309.00952-blue)](https://arxiv.org/abs/2309.00952)
-[![App](https://img.shields.io/badge/App-360鸿图-00ff00)](https://tu.360.cn)
+[![App](https://img.shields.io/badge/App-360鸿图-brightgreen)](https://tu.360.cn)
 
 Official repo for paper ["Bridge Diffusion Model: bridge non-English language-native text-to-image diffusion model with English communities"](https://arxiv.org/abs/2309.00952)    
 中文原理解读：[解决AI绘画模型的世界观偏见，并无缝兼容SD社区，360人工智能研究院发布中文原生AI绘画模型BDM](https://mp.weixin.qq.com/s/NDi9YBGDqM89XsVdQkCHbg)
