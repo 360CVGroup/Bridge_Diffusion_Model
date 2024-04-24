@@ -4,6 +4,7 @@
 
 Official repo for paper ["Bridge Diffusion Model: bridge non-English language-native text-to-image diffusion model with English communities"](https://arxiv.org/abs/2309.00952)    
 中文原理解读：[解决AI绘画模型的世界观偏见，并无缝兼容SD社区，360人工智能研究院发布中文原生AI绘画模型BDM](https://mp.weixin.qq.com/s/NDi9YBGDqM89XsVdQkCHbg)
+** we're preparing for code & model release on May 2024, stay tuned~
 
 ## Contents
   - [Introduction](#introduction)
