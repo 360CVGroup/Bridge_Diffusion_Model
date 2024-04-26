@@ -467,17 +467,14 @@ parser.add_argument('file_in')
 parser.add_argument('dir_out')
 parser.add_argument('pid',type=int)
 parser.add_argument('tol',type=int)
-parser.add_argument('ckpt')
 args=parser.parse_args()
 
 file_in=args.file_in
 dir_out=args.dir_out
 pid=args.pid
 tol=args.tol
-ckpt=args.ckpt
 
-controlnet_path = ckpt+'/controlnet'
-controlnet = ControlNetModelBDM.from_pretrained(controlnet_path, torch_dtype=torch.float16)
+controlnet = ControlNetModelBDM.from_pretrained('liushanyuan18/BDM1.0', torch_dtype=torch.float16)
 
 use_controlnet_sd=False
 config_path='config'
