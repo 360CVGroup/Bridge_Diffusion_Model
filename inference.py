@@ -474,7 +474,7 @@ dir_out=args.dir_out
 pid=args.pid
 tol=args.tol
 
-controlnet = ControlNetModelBDM.from_pretrained('liushanyuan18/BDM1.0', torch_dtype=torch.float16)
+controlnet = ControlNetModelBDM.from_pretrained('qihoo360/BDM1.0', torch_dtype=torch.float16)
 
 use_controlnet_sd=False
 config_path='config'
