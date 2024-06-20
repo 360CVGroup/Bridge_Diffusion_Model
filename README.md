@@ -51,13 +51,17 @@ cd diffusers
 pip install -e .
 ```
 
+## Model
+
+Running the command `sh run.sh` will initiate the download of the BDM 1.0 [model](https://huggingface.co/qihoo360/BDM1.0) from Hugging Face.
+
+Download [realisticVisionV60B1_v51VAE.safetensors](https://civitai.com/models/4201/realistic-vision-v60-b1?modelVersionId=130072) and place it in the model directory.
+
 ## Running the inference script
 ```
 cd Bridge_Diffusion_Model
 sh run.sh
 ```
-
-Running the command `sh run.sh` will initiate the download of the BDM 1.0 [model](https://huggingface.co/qihoo360/BDM1.0) from Hugging Face.
 
 ## Citation
 If you find this work helpful, please cite us by 
