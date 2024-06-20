@@ -39,7 +39,18 @@ Here are several image generation illustrations for our BDM, with Chinese-native
 <p align="center">Fig.3 Different English branch</p>     
 
 For more illustrations and details, please refer to our paper ["Bridge Diffusion Model: bridge non-English language-native text-to-image diffusion model with English communities"](https://arxiv.org/abs/2309.00952)    
- 
+
+## Environment
+git clone [text](https://github.com/360CVGroup/Bridge_Diffusion_Model.git)
+cd Bridge_Diffusion_Model
+conda env create -f environment.yml  
+cd diffusers
+pip install -e .
+
+## Models
+Running the command `sh run.sh` will initiate the download of the BDM 1.0 model from Hugging Face.
+The link for the BDM 1.0 model is [text](https://huggingface.co/qihoo360/BDM1.0)
+
 ## Citation
 If you find this work helpful, please cite us by 
 ```
