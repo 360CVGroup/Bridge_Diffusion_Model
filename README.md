@@ -49,7 +49,12 @@ cd diffusers
 pip install -e .
 ```
 
-## Models
+## Running the inference script
+```
+cd Bridge_Diffusion_Model
+sh run.sh
+```
+
 Running the command `sh run.sh` will initiate the download of the BDM 1.0 model from Hugging Face.
 
 The link for the BDM 1.0 model is [https://huggingface.co/qihoo360/BDM1.0](https://huggingface.co/qihoo360/BDM1.0)
