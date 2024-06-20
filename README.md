@@ -44,7 +44,9 @@ For more illustrations and details, please refer to our paper ["Bridge Diffusion
 ```
 git clone https://github.com/360CVGroup/Bridge_Diffusion_Model.git
 cd Bridge_Diffusion_Model
-conda env create -f environment.yml  
+conda env create -f environment.yml
+conda activate bdm
+pip install -r requirements.txt
 cd diffusers
 pip install -e .
 ```

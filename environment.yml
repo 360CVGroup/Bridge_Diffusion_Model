@@ -1,4 +1,4 @@
-name: /liushanyuan-sh-ceph/env/sd
+name: bdm
 channels:
   - pytorch
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
@@ -286,4 +286,3 @@ dependencies:
     - yapf==0.40.0
     - yarl==1.9.2
     - zipp==3.15.0
-prefix: /liushanyuan-sh-ceph/env/sd
