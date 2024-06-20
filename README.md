@@ -42,7 +42,7 @@ For more illustrations and details, please refer to our paper ["Bridge Diffusion
 
 ## Environment
 ```
-git clone [https://github.com/360CVGroup/Bridge_Diffusion_Model.git](https://github.com/360CVGroup/Bridge_Diffusion_Model.git)
+git clone https://github.com/360CVGroup/Bridge_Diffusion_Model.git
 cd Bridge_Diffusion_Model
 conda env create -f environment.yml  
 cd diffusers
