@@ -1,6 +1,7 @@
 # Bridge Diffusion Model
 [![Paper](https://img.shields.io/badge/Paper-arxiv.2309.00952-blue)](https://arxiv.org/abs/2309.00952)
 [![App](https://img.shields.io/badge/App-智绘-brightgreen)](https://aigc.360.com/)
+[![Model](https://img.shields.io/badge/Model-BDM1.0-blue)](https://huggingface.co/qihoo360/BDM1.0/)
 
 Official repo for paper ["Bridge Diffusion Model: bridge non-English language-native text-to-image diffusion model with English communities"](https://arxiv.org/abs/2309.00952)    
 中文原理解读：[解决AI绘画模型的世界观偏见，并无缝兼容SD社区，360人工智能研究院发布中文原生AI绘画模型BDM](https://mp.weixin.qq.com/s/NDi9YBGDqM89XsVdQkCHbg)
@@ -9,6 +10,9 @@ Official repo for paper ["Bridge Diffusion Model: bridge non-English language-na
   - [Introduction](#introduction)
   - [Method](#method)
   - [Evaluation](#evaluation)
+  - [Environment](#Environment)
+  - [Model](#Model)
+  - [Running](#Running)
   - [Citation](#citation)
   - [References](#references)
 
@@ -55,7 +59,7 @@ Running the command `sh run.sh` will initiate the download of the BDM 1.0 [model
 
 Download [realisticVisionV60B1_v51VAE.safetensors](https://civitai.com/models/4201/realistic-vision-v60-b1?modelVersionId=130072) and place it in the model directory.
 
-## Running the inference script
+## Running
 ```
 cd Bridge_Diffusion_Model
 sh run.sh
